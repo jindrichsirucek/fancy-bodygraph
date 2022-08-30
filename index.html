@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blank HTML5</title>
+        <style>
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <p class="fancyBodygraph">
+            <link rel="preload" href="img/1.jpg" as="image">
+            <link rel="preload" href="img/2.jpg" as="image">
+            <link rel="preload" href="img/3.jpg" as="image">
+            <link rel="preload" href="img/4.jpg" as="image">
+            <link rel="preload" href="img/5.jpg" as="image">
+            <link rel="preload" href="img/6.jpg" as="image">
+            <link rel="preload" href="img/7.jpg" as="image">
+            
+            <img id="image-holder" style="display: block; margin-left: auto; margin-right: auto;" src="img/0.jpg" usemap="#map" width="690" height="590" border="0"> 
+            <map name="map">
+                <area id="area-1" coords="7,14,298,72" shape="rect" href="#">
+                <area id="area-2" coords="7,70,300,133" shape="rect" href="#">
+                <area id="area-3" coords="7,132,298,193" shape="rect" href="#">
+                <area id="area-4" coords="6,193,298,255" shape="rect" href="#">
+                <area id="area-5" coords="6,255,298,317" shape="rect" href="#">
+                <area id="area-6" coords="6,318,299,380" shape="rect" href="#">
+                <area id="area-7" coords="6,381,298,435" shape="rect" href="#">
+            </map>
+        </p>
+
+            
+        <script>
+            jQuery(document).ready(function() 
+            {
+                //Fancy bodygraph
+                jQuery("#area-1").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/1.jpg") });
+                jQuery("#area-2").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/2.jpg") });
+                jQuery("#area-3").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/3.jpg") });
+                jQuery("#area-4").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/4.jpg") });
+                jQuery("#area-5").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/5.jpg") });
+                jQuery("#area-6").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/6.jpg") });
+                jQuery("#area-7").on('click mouseover', function() { jQuery("#image-holder").attr("src", "img/7.jpg") });
+                jQuery("#image-holder").mouseleave(function() { jQuery("#image-holder").attr("src", "img/0.jpg") });
+            });
+        </script>
+    </body>
+</html>
